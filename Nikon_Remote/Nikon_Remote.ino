@@ -58,7 +58,7 @@ void loop()
   delay((delaySeconds * 1000));
 }
 
-// This function generates teh actual pulses used to make the command:
+// This function generates the actual pulses used to make the command:
 // Note: Putting any print statements in here will cause the pulses to become skewed and unstable.
 void pulseLoop(int pulses, int SHINE)
 {
@@ -79,7 +79,7 @@ void pulseLoop(int pulses, int SHINE)
     for(i=0; i<delayValue; i++)
       {
         // SHINE only activates the IR LED when we are supposed to pulse, deactivates for the delay:
-        digitalWrite(2, (x & SHINE));
+        digitalWrite(pinIR_LED, (x & SHINE));
       }
     x =!x;
  }
